@@ -1,0 +1,34 @@
+; metatiles.asm
+; Saved using edit_blockset.py
+    db $FF, $FF, $FF, $FF, $57, $58, $FF, $0B, $57, $58, $0C, $0D, $FF, $FF, $14, $15
+    db $06, $07, $16, $17, $08, $09, $18, $19, $0A, $FF, $1A, $FF, $20, $21, $30, $31
+    db $22, $23, $32, $33, $24, $25, $34, $35, $26, $27, $36, $37, $28, $29, $38, $39
+    db $2A, $FF, $3A, $FF, $40, $41, $50, $51, $42, $43, $52, $53, $44, $45, $54, $55
+    db $46, $47, $55, $13, $48, $49, $FE, $F9, $4A, $FF, $F4, $FF, $FF, $FF, $AF, $9E
+    db $FF, $FF, $AF, $9F, $FF, $FF, $9E, $AF, $FF, $FF, $AF, $FF, $FF, $FF, $FF, $9E
+    db $FF, $FF, $AF, $AF, $FF, $B0, $FF, $B0, $FF, $B0, $FF, $E9, $FF, $E9, $FF, $E9
+    db $57, $58, $59, $5A, $57, $58, $FF, $FF, $B0, $B0, $B0, $B0, $B0, $B0, $5B, $B0
+    db $B0, $B0, $5B, $5B, $5B, $5B, $FF, $FF, $B0, $5B, $5B, $FF, $5E, $5E, $59, $5A
+    db $5D, $5E, $59, $5A, $5C, $5C, $5C, $5C, $57, $58, $5C, $5C, $5D, $5E, $FF, $FF
+    db $FF, $FF, $9D, $9D, $FF, $FF, $9D, $9E, $FF, $FF, $A9, $A9, $FF, $FF, $AF, $9F
+    db $FF, $FF, $9E, $A9, $FF, $FF, $AF, $FF, $FF, $FF, $FF, $9E, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+    db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF

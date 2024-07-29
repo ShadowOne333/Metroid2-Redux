@@ -1,0 +1,18 @@
+; colors.asm
+; Saved using edit_blockset.py
+    Palette $000000, $512822, $3D2208, $1D1105
+    Palette $000000, $FFD37B, $EA9745, $81482C
+    Palette $000000, $BCFFC6, $A8E32A, $AF9619
+    Palette $000000, $C8AB7B, $647149, $094602
+    Palette $000000, $F8FF6E, $D3A85D, $8C5237
+    Palette $000000, $DF7689, $84403E, $310B00
+    Palette $000000, $94B5FF, $103A8C, $100010
+    Palette $000000, $CECEC5, $5A5242, $100010
+    Palette $000000, $EFC652, $214A21, $520010
+    Palette $000000, $BD63FF, $8C009C, $4A007B
+    Palette $000000, $4A1800, $8C84BD, $210800
+    Palette $000000, $DEF7FF, $6384A5, $102131
+    Palette $000000, $FFF7DE, $E7A500, $6B0818
+    Palette $000000, $F3C600, $D3265D, $6C1236
+    Palette $000000, $DED300, $0E9945, $205F00
+    Palette $000000, $42FF73, $D04D4D, $7A3B00
