@@ -4,7 +4,7 @@
 
 # **Index**
 
-* [**Metroid 2 Redux Info**](#zelda-2-redux)
+* [**Metroid 2 Redux Info**](#metroid-2-redux)
 
 * [**Changelog**](#changelog)
 
