@@ -61,6 +61,7 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 * (DONE) Recolour sprites based on the original artwork found here:
 	https://metroiddatabase.com/wp-content/uploads/Metroid-2-Return-of-Samus/art/m2_enemies-1800x837.jpg
 	- Samus' Spring Ball sprite (was all white since the initial DX release)
+
 	ENEMIES: (DONE)
 	- Arachnus (Changed colours to match artwork)
 	- Hornoad underbellyoad (Dark Green -> Yellowish)
