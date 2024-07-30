@@ -12,6 +12,8 @@
 
 * [**Patching and Usage Instructions**](#instructions)
 
+* [**Build Instructions**](#build-instructions)
+
 * [**Credits**](#credits)
 
 * [**Project Licence**](#license)
@@ -21,7 +23,7 @@
 ## Metroid 2 Redux
 
 This is the source code for a Metroid 2 Redux romhack.
-This source code and romhack is based on the initial disassembly work made by [https://forum.metroidconstruction.com/index.php?action=profile;u=45628](MarioFan2468) from the [https://forum.metroidconstruction.com/](Metroid Construction) forums of the original [https://www.romhacking.net/hacks/4388/](Metroid II - EJRTQ Colorization) romhack.
+This source code and romhack is based on the initial disassembly work made by [MarioFan2468](https://forum.metroidconstruction.com/index.php?action=profile;u=45628) from the [Metroid Construction](https://forum.metroidconstruction.com/) forums of the original [Metroid II - EJRTQ Colorization](https://www.romhacking.net/hacks/4388/) romhack.
 
 Original description from the disassembly:
 "A disassembly of one of my favorite Game Boy games. A first-pass over every function of code has been completed, but there are still plenty of improvements to be made to make the code more intelligible and usable. Feel free to contribute."
@@ -33,14 +35,15 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 
 ## Changelog
 
-* Full disassembly of the EJRTQ romhack. Original disassembly by MarioFan2468, further modified by ShadowOne333.
-* Reworked the Credits/Ending Suitless Samus' palette to match the canon depiction colours for Samus. Similar to the [https://www.romhacking.net/hacks/4579/]("Canon Samus") patch from RHDN.
-* Implemented a bunch of Improvement Patches documented in the disassembly by MarioFan2468 into the main source code EJRTQ disassembly. These include:
+* (DONE) Full disassembly of the EJRTQ romhack. Original disassembly by MarioFan2468, further modified by ShadowOne333.
+* (DONE) Reworked the Credits/Ending Suitless Samus' palette to match the canon depiction colours for Samus. Similar to the ["Canon Samus"](https://www.romhacking.net/hacks/4579/) patch from RHDN.
+* (DONE) Fixed some rogue pixels in Samus' sprites for her visor.
+* (DONE) Implemented a bunch of Improvement Patches documented in the disassembly by MarioFan2468 into the main source code EJRTQ disassembly. These include:
 	- Pause during the Queen Metroid fight
 	- Improved Spider Ball
 	- Intersection transition
 	- Vertical Enemy Loading fix
-* Implement a proper [https://forum.metroidconstruction.com/index.php/topic,5569.0.html](Map system based on the Map Patch by Moehr)
+* Implement a proper [Map system based on the Map Patch by Moehr](https://forum.metroidconstruction.com/index.php/topic,5569.0.html)
 * (DONE) Change Missile Doors requirement from 5 to 1 (Located in Bank 02, Line 7631)
 * (DONE)  Change small energy amount from 5 to 10 (Located in Bank 02, Line 469)
 * Change Bomb timings (Possibly implement some pseudo IBJ)
@@ -58,25 +61,27 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 * (DONE) Recolour sprites based on the original artwork found here:
 	https://metroiddatabase.com/wp-content/uploads/Metroid-2-Return-of-Samus/art/m2_enemies-1800x837.jpg
 	- Samus' Spring Ball sprite (was all white since the initial DX release)
+	ENEMIES: (DONE)
 	- Arachnus (Changed colours to match artwork)
 	- Hornoad underbellyoad (Dark Green -> Yellowish)
 	- Autoad (Green -> Blue with Purple claws)
 	- Gullug (Properly recolour the wings)
 	- Halzyn (Green? -> Blue with Purple body)
-	- Pincherfly (??? -> Green with Red)
+	- Pincherfly (Changed to Green with Red)
 	- Shirk (Green -> White with Blue)
 	- Skorp (Green/Red -> Red with Blue)
 	- Octrol (Red -> Purple)
 	- Drivel (Purple -> Yellowish)
-	- Yumme ( -> Blue)
+	- Yumme (Changed to Blue)
 	- Skreek (Add yellow detail in mouth)
-	- Ramulken (make its lower body red)
+	- Ramulken (Make its lower body red)
 	- Gunzoo (Changed eye colour)
 		
 	METROIDS: (DONE) 
 	- Gamma Metroid -> Recoloured outer shell
 	- Zeta Metroid -> This one needs a proper recolour, otherwise it looks too yellow. Recoloured its shell parts to be somewhat green-ish instead of Yellow. Also made its arms yellowish.
 	- Omega Metroid -> Recoloured its shell parts to be somewhat green-ish instead of Yellow. Also made its arms yellowish.
+	- Queen Metroid -> Recoloured parts of her mouth, legs and also her stretching neck. The neck for some reason doesn't detect some palettes, so I worked with what I could.
 
 -------------------
 
@@ -94,11 +99,18 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 To play Metroid 2 Redux, the following is required:
 
 * mGBA - GBA Emulator
-* Metroid II GB ROM (Metroid II - Return of Samus (World).nes, MD5: ????)
-* Lunar IPS
+* Metroid II GB ROM with the following info:
+	- Metroid II - Return of Samus (World).gb
+	- No-intro ROM
+	- CRC32: 9639948ad274fa15281f549e5f9c4d87
+	- MD5: 9639948AD274FA15281F549E5F9C4D87
+	- SHA-1: 74A2FAD86B9A4C013149B1E214BC4600EFB1066D
+
+* Lunar IPS or Floating IPS (FLIPS) patchers, or [Romhacking.net's Online Patcher by Marc Robledo](https://www.romhacking.net/patch/)
 * Metroid2_Redux.ips patch
 
 Grab the patches from inside the /patches/ folder from the GitHub page, or alternatively, download the .zip file from the Releases page (once a proper release is out) and apply the patch over your Zelda II ROM with Lunar IPS.
+
 If you want to apply any of the optional patches, you can use each Optional patch individually from inside the /patches/optional folder depending on your liking over your already patched Metroid 2 Redux ROM, or you can either compile them manually from the source code, although this is not recommended if you are not familiar with compilations or Z80 assembly.
 
 -------------------
@@ -163,8 +175,11 @@ Subject to change.
 
 ## Credits
 
-* **MarioFan2468** - For the original disassembly of the EJRTQ romhack, which this project was based on.
+* **MarioFan2468** - For the original disassembly of the EJRTQ romhack, which this project is based on.
 * **Moehr** - For the Map Patch for Metroid II.
+* **Quantam / Justin Olbrantz** - For the original [Metroid II - EJRTQ 1.3](https://www.romhacking.net/hacks/4388/) colorization of the hack.
+* **Azurelore** - For the original [Metroid II - EJRT 1.2 colorization hack](https://www.aderack.com/m2/), which Quantam complete rewrote and continued with EJRTQ 1.3
+
 
 -------------------
 

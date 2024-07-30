@@ -1,0 +1,38 @@
+# build
+*.o
+*.gbc
+*.1bpp
+*.2bpp
+
+# bin
+Z80Dis
+DumpBanks
+dxeditor
+
+# rgbasm extras
+*.sym
+*.map
+
+# precompiled python
+*.pyc
+
+# swap files
+*.swp
+
+# visual studio
+*.pdb
+*.exe
+*.ilk
+*.obj
+*.sln
+*.suo
+
+# macos files
+*.DS_Store
+
+# temporary editor backups
+*~
+
+# save files
+*.sav
+*.ss*
