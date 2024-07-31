@@ -6,7 +6,8 @@
 
 * [**Metroid 2 Redux Info**](#metroid-2-redux)
 
-* [**Changelog**](#changelog)
+* [**Proposed Features**](#proposed-features)
+<!--* [**Changelog**](#changelog)-->
 
 * [**Optional Patches**](#optional-patches)
 
@@ -26,14 +27,14 @@ This is the source code for a Metroid 2 Redux romhack.
 This source code and romhack is based on the initial disassembly work made by [MarioFan2468](https://forum.metroidconstruction.com/index.php?action=profile;u=45628) from the [Metroid Construction](https://forum.metroidconstruction.com/) forums of the original [Metroid II - EJRTQ Colorization](https://www.romhacking.net/hacks/4388/) romhack.
 
 Original description from the disassembly:
-"A disassembly of one of my favorite Game Boy games. A first-pass over every function of code has been completed, but there are still plenty of improvements to be made to make the code more intelligible and usable. Feel free to contribute."
+> A disassembly of one of my favorite Game Boy games. A first-pass over every function of code has been completed, but there are still plenty of improvements to be made to make the code more intelligible and usable. Feel free to contribute.
 
 MarioFan2468's Source Code release can be found in this post at Metroid Construction:
 https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg73737
 
 -------------------
 
-## Changelog
+## Proposed Features
 
 * (DONE) Full disassembly of the EJRTQ romhack. Original disassembly by MarioFan2468, further modified by ShadowOne333.
 * (DONE) Reworked the Credits/Ending Suitless Samus' palette to match the canon depiction colours for Samus. Similar to the ["Canon Samus"](https://www.romhacking.net/hacks/4579/) patch from RHDN.
@@ -44,6 +45,7 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 	- Intersection transition
 	- Vertical Enemy Loading fix
 * Implement a proper [Map system based on the Map Patch by Moehr](https://forum.metroidconstruction.com/index.php/topic,5569.0.html)
+* Implement beam stacking, this means that getting Ice Beam and Spazer should give the effects of both beams combined, same with Wave+Ice, and so on (like in Super Metroid).
 * (DONE) Change Missile Doors requirement from 5 to 1 (Located in Bank 02, Line 7631)
 * (DONE)  Change small energy amount from 5 to 10 (Located in Bank 02, Line 469)
 * Change Bomb timings (Possibly implement some pseudo IBJ)
