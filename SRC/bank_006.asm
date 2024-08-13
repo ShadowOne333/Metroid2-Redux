@@ -12,8 +12,8 @@ gfx_cannonMissile:: incbin "gfx/samus/cannonMissile.2bpp"
 ; These graphics are patched into VRAM when loading a save or collecting the item
 gfx_beamIce:: incbin "gfx/samus/beamIce.2bpp"
 gfx_beamWave:: incbin "gfx/samus/beamWave.2bpp"
-gfx_beamSpazer:: ; Stub for an enterprising modder
-gfx_beamPlasma:: incbin "gfx/samus/beamSpazerPlasma.2bpp"
+gfx_beamSpazer:: incbin "gfx/samus/beamSpazer.2bpp"	; Stub for an enterprising modder
+gfx_beamPlasma:: incbin "gfx/samus/beamPlasma.2bpp"
 
 gfx_hud:: INCBIN "gfx/samus/hud.2bpp", $b0
 
@@ -46,8 +46,8 @@ colorid_cannonBeam::    incbin "gfx/samus/cannonBeam.attrmap"
 colorid_cannonMissile::    incbin "gfx/samus/cannonMissile.attrmap"
 colorid_beamIce::    incbin "gfx/samus/beamIce.attrmap"
 colorid_beamWave::    incbin "gfx/samus/beamWave.attrmap"
-colorid_beamSpazer::
-colorid_beamPlasma::    incbin "gfx/samus/beamSpazerPlasma.attrmap"
+colorid_beamSpazer::    incbin "gfx/samus/beamSpazer.attrmap"
+colorid_beamPlasma::    incbin "gfx/samus/beamPlasma.attrmap"
 colorid_hud::    incbin "gfx/samus/hud.attrmap", $b
 colorid_samusPowerSuit::    incbin "gfx/samus/samusPowerSuit.attrmap"
 colorid_samusVariaSuit::    incbin "gfx/samus/samusVariaSuit.attrmap"

@@ -48,6 +48,7 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 * Implement beam stacking, this means that getting Ice Beam and Spazer should give the effects of both beams combined, same with Wave+Ice, and so on (like in Super Metroid).
 * (DONE) Change Missile Doors requirement from 5 to 1 (Located in Bank 02, Line 7631)
 * (DONE)  Change small energy amount from 5 to 10 (Located in Bank 02, Line 469)
+* Make Morph Ball roll only when moving, otherwise stay still.
 * Change Bomb timings (Possibly implement some pseudo IBJ)
 * Change Plasma Beam colour to green. This would probably require splitting both Spazer and Plasma into two graphics and colouring the Plasma one green
 * Make it so Space Jump can be triggered again even if Samus returns to her upright stance, or if the next input for the next jump failed (to avoid having to fall all the way down before being able to re-enable Space Jump)

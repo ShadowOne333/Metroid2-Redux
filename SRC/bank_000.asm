@@ -9785,7 +9785,8 @@ pickup_plasmaBeam: ;{
     ld [samusBeam], a ; Redundant write
 jp handleItemPickup_end ;}
 
-gfxInfo_spazer: ; Free label for an enterprising modder
+gfxInfo_spazer: db BANK(gfx_beamSpazer)	; Free label for an enterprising modder
+    dw gfx_beamSpazer, vramDest_beam, $0020, colorid_beamSpazer
 gfxInfo_plasma: db BANK(gfx_beamPlasma)
     dw gfx_beamPlasma, vramDest_beam, $0020, colorid_beamPlasma
 

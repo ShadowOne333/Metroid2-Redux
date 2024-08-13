@@ -13,7 +13,7 @@ SRC/gfx/titleCredits/creditsFont.2bpp SRC/gfx/titleCredits/titleScreen.2bpp \
 SRC/gfx/samus/hud.2bpp \
 SRC/gfx/samus/samusPowerSuit.2bpp SRC/gfx/samus/samusVariaSuit.2bpp \
 SRC/gfx/samus/cannonBeam.2bpp SRC/gfx/samus/cannonMissile.2bpp \
-SRC/gfx/samus/beamIce.2bpp SRC/gfx/samus/beamWave.2bpp SRC/gfx/samus/beamSpazerPlasma.2bpp \
+SRC/gfx/samus/beamIce.2bpp SRC/gfx/samus/beamWave.2bpp SRC/gfx/samus/beamSpazer.2bpp SRC/gfx/samus/beamPlasma.2bpp \
 
 allattrmap := $(all2bpp:%.2bpp=%.attrmap)
 
