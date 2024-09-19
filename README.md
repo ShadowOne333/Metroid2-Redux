@@ -183,6 +183,7 @@ Subject to change.
 * **Moehr** - For the Map Patch for Metroid II.
 * **Quantam / Justin Olbrantz** - For the original [Metroid II - EJRTQ 1.3](https://www.romhacking.net/hacks/4388/) colorization of the hack.
 * **Azurelore** - For the original [Metroid II - EJRT 1.2 colorization hack](https://www.aderack.com/m2/), which Quantam complete rewrote and continued with EJRTQ 1.3
+* **Ryallasha N'vetay** - For the original [Metroid II: SGB Enhanced](https://www.romhacking.net/hacks/8548/) hack, which implements a custom SGB border for Metroid II. Its code was repurposed and reworked for Metroid 2 Redux to make it boot properly into CGB+Initial SGB border mode (SGB+CGB).
 
 
 -------------------

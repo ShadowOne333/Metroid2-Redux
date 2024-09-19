@@ -140,23 +140,23 @@ gfxInfo_commonItems:: db BANK(gfx_commonItems)
 SECTION "ROM Header", ROM0[$0100]
 Boot::
     nop
-    jp jumpToBoot
-
+    ;jp jumpToBoot	; Boot original
+    jp boot_hook	; Hijack for SGB Border code
 
 HeaderLogo::             NINTENDO_LOGO
 HeaderTitle::            db "METROID2", $00, $00, $00
 HeaderManufacturerCode:: db $00, $00, $00, $00
-HeaderCGBFlag::          db $c0
+HeaderCGBFlag::          db $C0
 HeaderNewLicenseeCode::  db $00, $00
-HeaderSGBFlag::          db $00
+HeaderSGBFlag::          db CART_INDICATOR_SGB	; Originally CART_INDICATOR_GB ($00)
 HeaderCartridgeType::    db $1B
 HeaderROMSize::          db $05
 HeaderRAMSize::          db $02
 HeaderDestinationCode::  db $01
-HeaderOldLicenseeCode::  db $01
+HeaderOldLicenseeCode::  db $33	; Originally $01, Changed to $33 for SGB Border
 HeaderMaskROMVersion::   db $00
-HeaderComplementCheck::  db $d5
-HeaderGlobalChecksum::   db $ff, $40
+HeaderComplementCheck::  db $D5
+HeaderGlobalChecksum::   db $FF, $40
 
 jumpToBoot: ; 00:0150
     ; Detect GBC (a is $11 on boot)

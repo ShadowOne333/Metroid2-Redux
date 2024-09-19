@@ -34,3 +34,6 @@ INCLUDE "maps/bank_00e.asm"
 INCLUDE "maps/bank_00f.asm"
 INCLUDE "bank_010.asm" ; good
 INCLUDE "bank_011.asm" ; good
+
+; SGB Border
+INCLUDE "sgb/main_sgb.asm"

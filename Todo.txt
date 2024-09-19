@@ -8,6 +8,8 @@ TODO CHANGES:
 		- Vertical Enemy Loading fix
 
 	* Implement a proper Map system based on the Map Patch by Moehr
+	* Implement a custom Super Game Boy border (For GBC+SGB on emus that support it)
+	* Implement a custom splash image for when the game tries to boot up in a DMG Game Boy
 	* (DONE) Change Missile Doors requirement from 5 to 1 (Located in Bank 02, Line 7631)
 	* (DONE)  Change small energy amount from 5 to 10 (Located in Bank 02, Line 469)
 	* Change Bomb timings (Possibly implement some pseudo IBJ)

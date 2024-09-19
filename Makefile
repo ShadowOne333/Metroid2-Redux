@@ -14,10 +14,14 @@ SRC/gfx/samus/hud.2bpp \
 SRC/gfx/samus/samusPowerSuit.2bpp SRC/gfx/samus/samusVariaSuit.2bpp \
 SRC/gfx/samus/cannonBeam.2bpp SRC/gfx/samus/cannonMissile.2bpp \
 SRC/gfx/samus/beamIce.2bpp SRC/gfx/samus/beamWave.2bpp SRC/gfx/samus/beamSpazer.2bpp SRC/gfx/samus/beamPlasma.2bpp \
+SRC/dmg/m2dmg.2bpp \
 
 allattrmap := $(all2bpp:%.2bpp=%.attrmap)
 
 all: SRC/gfx/titleCredits/titleScreen_add80.tilemap $(all2bpp) $(allattrmap) out/ejrtq.gbc
+
+SRC/dmg/m2dmg.2bpp SRC/dmg/m2dmg.pal SRC/dmg/m2dmg.tilemap SRC/dmg/m2dmg.attrmap: SRC/dmg/m2dmg.png
+	rgbgfx -o $(basename $@).2bpp $< -u -P -T -A
 
 SRC/gfx/titleCredits/creditsSprTilesVaria.2bpp SRC/gfx/titleCredits/creditsSprTilesVaria.attrmap: SRC/gfx/titleCredits/creditsSprTilesVaria.png
 SRC/gfx/titleCredits/creditsSprTilesSuitless.2bpp SRC/gfx/titleCredits/creditsSprTilesSuitless.attrmap: SRC/gfx/titleCredits/creditsSprTilesSuitless.png
