@@ -612,7 +612,7 @@ square2_variableFrequency: ds 1 ; $CECC - Variable tone channel frequency. Only 
 ds 1 ; $CECD - Unused?
 
 ;    $CECE..CED4: Would be the wave channel sound effect, but is unused (only cleared) and $CEE6/$CFE5 is used instead.
-sfxRequest_fakeWave : ds 1 ; $CECE
+sfxRequest_fakeWave: ds 1 ; $CECE
 sfxPlaying_fakeWave: ds 1 ; $CECF
 
 ds 5 ; $CED0..CED4 - Unused?
@@ -1354,10 +1354,10 @@ gameModeOld: ds 1 ; $D445 - set to gameMode
 transferType: ds 1 ; $D446 - 00 == None, 01 == tilemap, 02 == tileset or other
 tempTransferSize: ds 1 ; $D447 - 10:41f1
 screenFlashGBCOld: ds 1 ; $D448 - 00 == Fadeout, 01 == None, 82 == flash1, 83 == flash2
-screenFlashGBC : ds 1 ; $D449
-transferColorsFlag : ds 1 ; $D44A - set when colors change in colorBuffer
+screenFlashGBC: ds 1 ; $D449
+transferColorsFlag: ds 1 ; $D44A - set when colors change in colorBuffer
 fadeInColorTimer: ds 1 ; $D44B - Decreases every 4 frames
-fadeInColorTimerOld : ds 1 ; $D44C
+fadeInColorTimerOld: ds 1 ; $D44C
 ds 1
 
 bankRegMirrorGBC: ds 1 ; $D44E - Bank

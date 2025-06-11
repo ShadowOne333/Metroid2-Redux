@@ -1095,7 +1095,7 @@ writeToWavePatternRam:
 
     .loop
         ld a, [de]
-        ld [c], a
+        ldh [c],a	;ld [c], a
         inc de
         inc c
         ld a, c

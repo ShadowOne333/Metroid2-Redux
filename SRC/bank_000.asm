@@ -375,7 +375,7 @@ bootRoutine: ;{ 00:01FB
     ld hl, oamDMA_routine
     .loadLoop:
         ld a, [hl+]
-        ld [c], a
+        ldh [c],a	;ld [c], a
         inc c
         dec b
     jr nz, .loadLoop
