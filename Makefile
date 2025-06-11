@@ -18,7 +18,7 @@ SRC/dmg/m2dmg.2bpp \
 
 allattrmap := $(all2bpp:%.2bpp=%.attrmap)
 
-all: SRC/gfx/titleCredits/titleScreen_add80.tilemap $(all2bpp) $(allattrmap) out/ejrtq.gbc
+all: SRC/gfx/titleCredits/titleScreen_add80.tilemap $(all2bpp) $(allattrmap) out/Metroid2-Redux.gbc
 
 SRC/dmg/m2dmg.2bpp SRC/dmg/m2dmg.pal SRC/dmg/m2dmg.tilemap SRC/dmg/m2dmg.attrmap: SRC/dmg/m2dmg.png
 	rgbgfx -o $(basename $@).2bpp $< -u -P -T -A
@@ -46,8 +46,8 @@ SRC/gfx/enemies/queenSPR.2bpp SRC/gfx/enemies/queenSPR.attrmap: SRC/gfx/enemies/
 out/game.o: SRC/game.asm SRC/bank_*.asm out
 	rgbasm -o $@ -I $(<D) $<
 
-out/ejrtq.gbc: out/game.o
-	rgblink -n out/ejrtq.sym -m out/ejrtq.map -o $@ $<
+out/Metroid2-Redux.gbc: out/game.o
+	rgblink -n out/Metroid2-Redux.sym -m out/Metroid2-Redux.map -o $@ $<
 	rgbfix -v $@
 
 	@if which md5sum &>/dev/null; then md5sum $@; else md5 $@; fi
@@ -56,5 +56,5 @@ out:
 	mkdir $@
 
 clean:
-	rm -f out/game.o out/ejrtq.gbc out/ejrtq.sym out/ejrtq.map SRC/gfx/titleCredits/titleScreen.pal
+	rm -f out/game.o out/Metroid2-Redux.gbc out/Metroid2-Redux.sym out/Metroid2-Redux.map SRC/gfx/titleCredits/titleScreen.pal
 	find . \( -iname '*.2bpp' -o -iname '*.attrmap' -o -iname '*.tilemap' \) -exec rm {} +
