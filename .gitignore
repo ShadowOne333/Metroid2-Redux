@@ -1,5 +1,6 @@
 # build
 *.o
+*.gb
 *.gbc
 *.1bpp
 *.2bpp

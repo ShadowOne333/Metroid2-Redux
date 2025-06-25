@@ -18,7 +18,7 @@ SRC/dmg/m2dmg.2bpp \
 
 allattrmap := $(all2bpp:%.2bpp=%.attrmap)
 
-all: SRC/gfx/titleCredits/titleScreen_add80.tilemap $(all2bpp) $(allattrmap) out/Metroid2-Redux.gbc
+all: SRC/gfx/titleCredits/titleScreen_add80.tilemap $(all2bpp) $(allattrmap) out/Metroid2-Redux.gbc out/Metroid2-Redux.ips out/Metroid2-Redux.bps
 
 SRC/dmg/m2dmg.2bpp SRC/dmg/m2dmg.pal SRC/dmg/m2dmg.tilemap SRC/dmg/m2dmg.attrmap: SRC/dmg/m2dmg.png
 	rgbgfx -o $(basename $@).2bpp $< -u -P -T -A
@@ -54,6 +54,11 @@ out/Metroid2-Redux.gbc: out/game.o
 
 out:
 	mkdir $@
+
+out/Metroid2-Redux.ips:
+	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.ips"
+out/Metroid2-Redux.bps:
+	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.bps"
 
 clean:
 	rm -f out/game.o out/Metroid2-Redux.gbc out/Metroid2-Redux.sym out/Metroid2-Redux.map SRC/gfx/titleCredits/titleScreen.pal
