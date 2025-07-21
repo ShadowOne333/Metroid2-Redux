@@ -835,9 +835,9 @@ bootRoutineDMG:
     ld bc, $0D00	; $0C90 for Redux screen, originally $0200
     call copyToVram
 
-    ld de, _SCRN0 ; src
-    ld hl, DMGMessage ; dest, originally _SCRN0 + 3*$20
-    ld bc, $0240 ; length of a row in vram tilemap, originally $0020
+    ld hl, DMGMessage ; src
+    ld de, _SCRN0 ; dest, originally _SCRN0 + 3*$20
+    ld bc, $0240 ; length of vram tilemap, originally $0020
     call copyToVram
 
     .end:
