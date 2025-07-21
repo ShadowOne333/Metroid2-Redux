@@ -831,36 +831,18 @@ bootRoutineDMG:
     ld sp, stack.bottom ; $DFFF
 
     ld hl, gfx_creditsFontDMG
-    ld de, vramDest_creditsFont
-    ld bc, $0200	; $0C90 for Redux screen
+    ld de, $8000	; Originally vramDest_creditsFont ($9200)
+    ld bc, $0D00	; $0C90 for Redux screen, originally $0200
     call copyToVram
 
-    ld de, DMGMessage ; src
-    ld hl, _SCRN0 + 3*$20 ; dest
-    ld bc, $0020 ; length of a row in vram tilemap
-    
-    .transferTilemapLoop:
-    ld a, [de]
-    inc de
-    cp $f0
-        jr z, .end
-    cp $f1
-        jr z, .newline
-
-    sub $21
-    ld [hl+], a
-    jr .transferTilemapLoop
-    
-    .newline:
-    ld a, l
-    and $e0
-    ld l, a
-    add hl, bc
-    jr .transferTilemapLoop
+    ld de, _SCRN0 ; src
+    ld hl, DMGMessage ; dest, originally _SCRN0 + 3*$20
+    ld bc, $0240 ; length of a row in vram tilemap, originally $0020
+    call copyToVram
 
     .end:
     ; Enable LCD (only background)
-    ld a, $c1
+    ld a, $d1
     ldh [rLCDC], a
 
     ; stop all execution forever
@@ -869,10 +851,8 @@ bootRoutineDMG:
         nop
     jr .haltLoop
 
-DMGMessage: include "data/dmg_message.asm"
-;DMGMessage: include "SRC/dmg/m2dmg_message.asm"
-gfx_creditsFontDMG:     incbin "gfx/titleCredits/creditsFont.2bpp"
-;gfx_creditsFontDMG: incbin "SRC/dmg/m2dmg.2bpp"
+DMGMessage: include "SRC/dmg/m2dmg_message.asm"
+gfx_creditsFontDMG: incbin "SRC/dmg/m2dmg.2bpp"
 
 SECTION "ROM Bank $010 - Chunk from bank 3", ROMX[queen_headFrameA], BANK[$10]
 ; Queen head tilemaps

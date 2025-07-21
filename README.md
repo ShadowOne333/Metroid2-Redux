@@ -39,13 +39,14 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 * (DONE) Full disassembly of the EJRTQ romhack. Original disassembly by MarioFan2468, further modified by ShadowOne333.
 * (DONE) Reworked the Credits/Ending Suitless Samus' palette to match the canon depiction colours for Samus. Similar to the ["Canon Samus"](https://www.romhacking.net/hacks/4579/) patch from RHDN.
 * (DONE) Fixed some rogue pixels in Samus' sprites for her visor.
+* (DONE) Implement a custom splash image for when the game tries to boot up in a DMG Game Boy
 * (DONE) Implemented a bunch of Improvement Patches documented in the disassembly by MarioFan2468 into the main source code EJRTQ disassembly. These include:
 	- Pause during the Queen Metroid fight
 	- Improved Spider Ball
 	- Intersection transition
 	- Vertical Enemy Loading fix
 * Implement a proper [Map system based on the Map Patch by Moehr](https://forum.metroidconstruction.com/index.php/topic,5569.0.html)
-* Implement beam stacking, this means that getting Ice Beam and Spazer should give the effects of both beams combined, same with Wave+Ice, and so on (like in Super Metroid).
+* Implement beam stacking, this means that getting Ice Beam and Spazer should give the effects of both beams combined, same with Wave+Ice, and so on (like in Super Metroid). Otherwise, implement Beam switching to avoid going back for certain beams.
 * (DONE) Change Missile Doors requirement from 5 to 1 (Located in Bank 02, Line 7631)
 * (DONE)  Change small energy amount from 5 to 10 (Located in Bank 02, Line 469)
 * Make Morph Ball roll only when moving, otherwise stay still.
@@ -179,12 +180,12 @@ Subject to change.
 
 ## Credits
 
-* **MarioFan2468** - For the original disassembly of the EJRTQ romhack, which this project is based on.
+* **MarioFan2468** - For the original disassembly of the EJRTQ romhack, which this project is based on, and help on the GBC-Only splash screen
 * **Moehr** - For the Map Patch for Metroid II.
+* **LOO-E** - For help on the GBC-Only splash screen
 * **Quantam / Justin Olbrantz** - For the original [Metroid II - EJRTQ 1.3](https://www.romhacking.net/hacks/4388/) colorization of the hack.
 * **Azurelore** - For the original [Metroid II - EJRT 1.2 colorization hack](https://www.aderack.com/m2/), which Quantam complete rewrote and continued with EJRTQ 1.3
 * **Ryallasha N'vetay** - For the original [Metroid II: SGB Enhanced](https://www.romhacking.net/hacks/8548/) hack, which implements a custom SGB border for Metroid II. Its code was repurposed and reworked for Metroid 2 Redux to make it boot properly into CGB+Initial SGB border mode (SGB+CGB).
-
 
 -------------------
 
@@ -197,3 +198,4 @@ Metroid 2 Redux is a project licensed under the terms of the GPLv3, which means 
 
 You can find a copy of the license in the LICENSE file.
 
+-------------------
