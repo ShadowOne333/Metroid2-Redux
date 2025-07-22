@@ -1,6 +1,7 @@
 TODO CHANGES:
 
 	* Implement a proper Map system based on the Map Patch by LOO-E
+	* Implement beam stacking, or in case it's not possible, a way to toggle Beams/Items on/off once obtained.
 	* Make it so Space Jump can be triggered again even if Samus returns to her upright stance, or if the next input for the next jump failed (to avoid having to fall all the way down before being able to re-enable Space Jump)
 	* Change Bomb timings (Possibly implement some pseudo IBJ)
 	* Make all frozen enemies blue (some get turned to purple when hit with the Ice Beam, this is particularly noticeable when there's enemies with two different palettes and they get frozen)
