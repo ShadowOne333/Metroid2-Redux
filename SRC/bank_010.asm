@@ -832,7 +832,7 @@ bootRoutineDMG:
 
     ld hl, gfx_creditsFontDMG
     ld de, $8000	; Originally vramDest_creditsFont ($9200)
-    ld bc, $0D00	; $0C90 for Redux screen, originally $0200
+    ld bc, $0F10	; $0C90 for Redux screen, originally $0200
     call copyToVram
 
     ld hl, DMGMessage ; src
@@ -850,9 +850,6 @@ bootRoutineDMG:
         halt
         nop
     jr .haltLoop
-
-DMGMessage: include "SRC/dmg/m2dmg_message.asm"
-gfx_creditsFontDMG: incbin "SRC/dmg/m2dmg.2bpp"
 
 SECTION "ROM Bank $010 - Chunk from bank 3", ROMX[queen_headFrameA], BANK[$10]
 ; Queen head tilemaps
@@ -877,3 +874,5 @@ queenBank10_headFrameC: ; 03:6FEA
     db $EA, $EB, $EC, $ED, $DE, $FF
     db $FA, $FB, $FC, $FD, $EE, $D9
     db $FF, $FF, $FF, $FF, $FF, $FF
+
+gfx_creditsFontDMG: incbin "SRC/dmg/m2dmg.2bpp"

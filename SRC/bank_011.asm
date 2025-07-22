@@ -13,4 +13,3 @@ colorid_metGamma::    incbin "gfx/enemies/metGamma.attrmap"
 colorid_metZeta::    incbin "gfx/enemies/metZeta.attrmap"
 colorid_metOmega::    incbin "gfx/enemies/metOmega.attrmap"
 colorid_queenSPR::    incbin "gfx/enemies/queenSPR.attrmap"
-
