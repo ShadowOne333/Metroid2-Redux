@@ -40,6 +40,7 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 * (DONE) Reworked the Credits/Ending Suitless Samus' palette to match the canon depiction colours for Samus. Similar to the ["Canon Samus"](https://www.romhacking.net/hacks/4579/) patch from RHDN.
 * (DONE) Fixed some rogue pixels in Samus' sprites for her visor.
 * (DONE) Implement a custom splash image for when the game tries to boot up in a DMG Game Boy
+* (DONE) Implement a custom Super Game Boy border (For GBC+SGB on emus that support it)
 * (DONE) Implemented a bunch of Improvement Patches documented in the disassembly by MarioFan2468 into the main source code EJRTQ disassembly. These include:
 	- Pause during the Queen Metroid fight
 	- Improved Spider Ball
@@ -51,10 +52,10 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 * (DONE)  Change small energy amount from 5 to 10 (Located in Bank 02, Line 469)
 * Make Morph Ball roll only when moving, otherwise stay still.
 * Change Bomb timings (Possibly implement some pseudo IBJ)
-* Change Plasma Beam colour to green. This would probably require splitting both Spazer and Plasma into two graphics and colouring the Plasma one green
+* (DONE) Change Plasma Beam colour to green. This would probably require splitting both Spazer and Plasma into two graphics and colouring the Plasma one green (Changes made in bank_000.asm line 9788, bank_006.asm lines 15 and 49, build.py line 12 and Makefile line 16)
 * Make it so Space Jump can be triggered again even if Samus returns to her upright stance, or if the next input for the next jump failed (to avoid having to fall all the way down before being able to re-enable Space Jump)
 * Make all frozen enemies blue (some get turned to purple when hit with the Ice Beam, this is particularly noticeable when there's enemies with two different palettes and they get frozen)
-* Add Health and Missiles refills to the Omega Nest
+* Add Health and Missiles refills to the Omega Nest and Area 7 (Area with the first encounter of an Omega Metroid)
 
 ## Colour Changes:
 
@@ -94,7 +95,7 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 
 (The following patches are not implemented yet)
 * Save Stations refill both health and missiles
-* Heavy Physics: Change Samus' falling speed to be quicker (?). A Heavy physics patch (simialr to Super Metroid Redux) in other words so Samus doesn't feel so floaty.
+* Heavy Physics: Change Samus' falling speed to be quicker (?). A Heavy physics patch (similar to Super Metroid Redux) in other words so Samus doesn't feel so floaty.
 * Remove the Alarm that sounds when Samus' Health is low.
 
 -------------------
