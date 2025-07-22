@@ -851,6 +851,8 @@ bootRoutineDMG:
         nop
     jr .haltLoop
 
+DMGMessage: include "SRC/dmg/m2dmg_message.asm"
+
 SECTION "ROM Bank $010 - Chunk from bank 3", ROMX[queen_headFrameA], BANK[$10]
 ; Queen head tilemaps
 queenBank10_headFrameA: ; 03:6FA2
