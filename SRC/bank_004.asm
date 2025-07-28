@@ -8791,8 +8791,8 @@ song_subCaves3_wave_section1:
 ;{
     SongOptions
         WaveOptions $418B, 3, $3
-    SongNoteLength_DottedCrochet
     SongRepeatSetup $6
+        SongNoteLength_DottedCrochet	; Suggested fix by Mariofan
         SongNote "B3"
     SongRepeat
     SongRepeatSetup $6
@@ -13595,7 +13595,7 @@ song_subCaves3_noIntro_header:
 
 ; $7C66
 song_subCaves4_noIntro_header:
-    SongHeader $0, tempoTable_112, $0000, song_subCaves4_square2.alternateEntry, $0000, $0000
+    SongHeader $0, tempoTable_75, $0000, song_subCaves4_square2.alternateEntry, $0000, $0000	; Change tempoTable_112 to tempoTable_75 to fix the intro (Mariofan suggestion)
 
 ; $7C71
 song_metroidHive_withIntro_header:
