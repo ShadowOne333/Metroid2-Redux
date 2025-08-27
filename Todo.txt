@@ -9,6 +9,31 @@ TODO CHANGES:
 
 --------------------------------------
 
+LOO-E'S SUGGESTIONS:
+
+	* Item toggle from the Status screen from Loo-e's Map hack
+
+	* Several bugfixes by LOO-E from his Map hack (Queen fixes, etc)
+
+	* Spider Throwing fix to allow for it in both directions
+	Activating Spider in midair while moving left, Samus moves horizontally quicker than intended, but in vanilla, it only works when going left for some reason
+
+	* Move a refill in Area 3 down one tile, and fill in the space where it originally was. This fixes the plant respawn underneath Samus.
+
+	* Make Autrack's projectiles non-freezable
+
+	* Make Wallfire projectiles non-freezable
+
+	* Play the Alternate Metroid Nest theme after the increase on the Metroid counter (in vanilla, the 2nd variant only plays the 1st time you trigger the cutscene)
+
+	* Fix door connection with the tower (Top left connection from the upmost room with a beam item)
+
+	* Music tweaks (probably already done in Loo-e's map hack)
+
+	* Caverns 3 music theme is bugged (I think I fixed this already for Redux)
+
+--------------------------------------
+
 Optional patches:
 	* Save Stations refill both health and missiles
 	* Heavy Physics: Change Samus' falling speed to be quicker (?). A Heavy physics patch (similar to Super Metroid Redux) in other words so Samus doesn't feel so floaty.

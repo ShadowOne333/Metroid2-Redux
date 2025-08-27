@@ -3196,7 +3196,7 @@ poseFunc_spiderJump: ;{ 00:1170 - $0D: Spider ball jumping
     ldh a, [hInputPressed]
     bit PADB_RIGHT, a
     jr z, .else_D
-        call poseFunc_spiderRoll.right ; Change to "samus_rollRight.morph" for BIDIRECTIONAL SPIDER THROWING ($1132 -> $1C98)
+        call samus_rollRight.morph ; Change to "samus_rollRight.morph" for BIDIRECTIONAL SPIDER THROWING ($1132 -> $1C98), originally "poseFunc_spiderRoll.right"
         ret
     .else_D:
         ; Move left if left is pressed
