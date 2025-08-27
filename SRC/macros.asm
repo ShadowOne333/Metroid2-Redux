@@ -130,7 +130,7 @@ endm
 
 macro SongNote ; [note name in "[A-G]b?[2-7]" format]
     def _note   equs strslice(\1, 0, -1)
-    def _octave equs strslice(\1, -1, strlen(\1))
+    def _octave equs strslice(\1, -1) ; No 3rd argument = strlen(\1)
     
     def _i_octave equ _octave - 2
     static_assert _i_octave < 6, "Invalid note octave"
