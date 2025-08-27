@@ -30,6 +30,8 @@ LOO-E'S SUGGESTIONS:
 
 	* Music tweaks (probably already done in Loo-e's map hack)
 
+	* When killing an enemy, if the enemy is killed while blinking from about to unfreeze, the drop will retain the sprite attributes of the defeat enemy (ie, invisiblity, flipping etc). Easily fixable by xoring the enemy attribute when exploding
+
 	* Caverns 3 music theme is bugged (I think I fixed this already for Redux)
 
 --------------------------------------
