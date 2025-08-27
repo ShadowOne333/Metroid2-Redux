@@ -145,7 +145,7 @@ Boot::
 
 HeaderLogo::             NINTENDO_LOGO
 HeaderTitle::            db "METROID2", $00, $00, $00
-HeaderManufacturerCode:: db $00, $00, $00, $00
+HeaderManufacturerCode:: db "MER2"	; $00, $00, $00, $00 - DMG/CGB-XXXX
 HeaderCGBFlag::          db $C0
 HeaderNewLicenseeCode::  db $00, $00
 HeaderSGBFlag::          db CART_INDICATOR_SGB	; Originally CART_INDICATOR_GB ($00)
