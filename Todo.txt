@@ -15,6 +15,8 @@ LOO-E'S SUGGESTIONS:
 
 	* Several bugfixes by LOO-E from his Map hack (Queen fixes, etc)
 
+	* Make the 6th E-Tank visible, both in-game, and in File select
+
 	* Spider Throwing fix to allow for it in both directions
 	Activating Spider in midair while moving left, Samus moves horizontally quicker than intended, but in vanilla, it only works when going left for some reason
 
