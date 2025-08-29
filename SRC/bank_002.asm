@@ -7593,6 +7593,8 @@ ret
 ;------------------------------------------------------------------------------
 ; Missile Door
 enAI_missileDoor: ;{ 02:6A14
+    ; Fix door clipping
+    call touchingMissileDoor
     ; Load results of collision tests with this object
     call enemy_getSamusCollisionResults
     ; If not the door sprite, jump ahead
@@ -11240,5 +11242,33 @@ enemy_toggleVisibility: ;{ 02:7DF8
     ld [hl], a
 ret
 ;}
+
+;------------------------------------------------------------------------------
+; Special code for pushing Samus away during i-frames
+; So she can't go through missile doors
+touchingMissileDoor:
+    ld a, [samusInvulnerableTimer]
+    and a
+    ret z
+
+    ; Check if Samus is in range
+    ld hl, hEnemy.xPos
+    ld a, [hl]
+    add $10
+    ld b, a
+    ld a, [samus_onscreenXPos]
+    add $10
+    sub b
+    jr nc, .endIf_C
+    cpl
+    inc a
+.endIf_C:
+    cp $10
+    ret nc
+
+    ldh a, [hSamusXPixel]
+    add $04
+    ldh [hSamusXPixel], a
+    ret
 
 bank2_freespace: ; 02:7E05 - Freespace 
