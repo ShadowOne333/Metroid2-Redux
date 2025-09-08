@@ -6,6 +6,7 @@ TODO CHANGES:
 	* Change Bomb timings (Possibly implement some pseudo IBJ)
 	* Make all frozen enemies blue (some get turned to purple when hit with the Ice Beam, this is particularly noticeable when there's enemies with two different palettes and they get frozen)
 	* Add Health and Missiles refills to the Omega Nest and Area 7 (Area with the first encounter of an Omega Metroid)
+	* Change the number "4" tile to be more discernible from number "9"
 
 --------------------------------------
 
@@ -38,6 +39,12 @@ LOO-E'S SUGGESTIONS:
 		DONE: bank_002, line 681
 
 	* Caverns 3 music theme is bugged (I think I fixed this already for Redux)
+
+	* Area 6 has a music bug when the player runs away from Screw Attack Zeta Metroid
+
+	* I-frame floor bug
+
+	* Out of bounds glitch that can be achieved in the Queen Metroid room by using Spider ball on the ceiling after the Queen spits out acid into Samus
 
 --------------------------------------
 
