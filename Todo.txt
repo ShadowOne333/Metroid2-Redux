@@ -46,6 +46,8 @@ LOO-E'S SUGGESTIONS:
 
 	* Out of bounds glitch that can be achieved in the Queen Metroid room by using Spider ball on the ceiling after the Queen spits out acid into Samus
 
+	* If Samus defeats a frozen enemy while standing pressed up against it, as the enemy explodes, Samus is teleported ~16px up into the air (Idk why, but some hitbox shenanigans, I'm guessing)
+
 --------------------------------------
 
 Optional patches:
