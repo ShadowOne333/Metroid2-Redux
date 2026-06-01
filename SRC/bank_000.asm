@@ -1056,6 +1056,8 @@ gameMode_Main: ;{ 00:04DF
         jp nc, .queenBranch
     ; Handle window height, save sprite text, earthquake, low heath beep, fade in, and Metroid Queen cry
     call miscIngameTasks_longJump
+    ; Implement Respin hack by Liam Major and PJBoy for Redux
+    call Respin_Hijack
     ; Check if dead (when displayed health is zero)
     ld a, [samusDispHealthLow]
     ld b, a
@@ -10633,7 +10635,29 @@ VBlank_updateCreditsLineColor_longJump:
     jp VBlankHandler.endInterrupt
 
 
+Respin_Hijack:
+	ld a, [hInputRisingEdge]
+	bit PADB_A, a
+	ret z
 
+	ld a, [samusItems]
+	bit itemBit_space, a
+	ret z
+
+	ld hl, samusPose
+	ld a, [hl]
+	cp pose_jump
+	jr z, .exit_respin
+
+	cp pose_fall
+	jr z, .exit_respin
+	xor a
+	ret
+
+.exit_respin:
+	ld [hl], pose_spinJump
+	xor a
+	ret
 
 
 bank0_freespace:

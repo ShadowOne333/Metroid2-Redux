@@ -52,6 +52,9 @@ out/Metroid2-Redux.gbc: out/game.o
 
 	@if which md5sum &>/dev/null; then md5sum $@; else md5 $@; fi
 
+	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.ips"
+	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.bps"
+
 out:
 	mkdir $@
 
@@ -61,5 +64,5 @@ out/Metroid2-Redux.bps:
 	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.bps"
 
 clean:
-	rm -f out/game.o out/Metroid2-Redux.gbc out/Metroid2-Redux.sym out/Metroid2-Redux.map SRC/gfx/titleCredits/titleScreen.pal
+	rm -f out/game.o out/Metroid2-Redux.gbc out/Metroid2-Redux.sym out/Metroid2-Redux.map SRC/gfx/titleCredits/titleScreen.pal out/Metroid2-Redux.ips out/Metroid2-Redux.bps
 	find . \( -iname '*.2bpp' -o -iname '*.attrmap' -o -iname '*.tilemap' \) -exec rm {} +

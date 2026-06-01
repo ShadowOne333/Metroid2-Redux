@@ -678,7 +678,6 @@ jr .transferCollisionResults ; Exit
     ; Clear timer
     xor a
     ldh [hEnemy.counter], a
-    ldh [hEnemy.status], a	; Reset visibility/flipping etc
     ; Play noise
     ld a, $02
     ld [sfxRequest_noise], a
@@ -3841,6 +3840,7 @@ ret
     ldh [hEnemy.iceCounter], a
     ldh [hEnemy.counter], a
     ldh [hEnemy.explosionFlag], a
+    ldh [hEnemy.attr], a
 ret
 
 .dropNothing:
