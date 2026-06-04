@@ -50,10 +50,10 @@ https://forum.metroidconstruction.com/index.php/topic,5789.msg73737.html#msg7373
 * Implement beam stacking, this means that getting Ice Beam and Spazer should give the effects of both beams combined, same with Wave+Ice, and so on (like in Super Metroid). Otherwise, implement Beam switching to avoid going back for certain beams.
 * (DONE) Change Missile Doors requirement from 5 to 1 (Located in Bank 02, Line 7631)
 * (DONE)  Change small energy amount from 5 to 10 (Located in Bank 02, Line 469)
+* (DONE) Change Plasma Beam colour to green. This would probably require splitting both Spazer and Plasma into two graphics and colouring the Plasma one green (Changes made in bank_000.asm line 9790, bank_006.asm lines 15 and 49, build.py line 12 and Makefile line 16)
+* (DONE) Respin: Make it so Space Jump can be triggered again even if Samus returns to her upright stance, or if the next input for the next jump failed (to avoid having to fall all the way down before being able to re-enable Space Jump). Respin hack by Liam Major and PJBoy ported over to Redux in proper disassembly format by ShadowOne333 (Changes made in bank_000.asm line 1560 and line 10638)
 * Make Morph Ball roll only when moving, otherwise stay still.
 * Change Bomb timings (Possibly implement some pseudo IBJ)
-* (DONE) Change Plasma Beam colour to green. This would probably require splitting both Spazer and Plasma into two graphics and colouring the Plasma one green (Changes made in bank_000.asm line 9788, bank_006.asm lines 15 and 49, build.py line 12 and Makefile line 16)
-* Make it so Space Jump can be triggered again even if Samus returns to her upright stance, or if the next input for the next jump failed (to avoid having to fall all the way down before being able to re-enable Space Jump)
 * Make all frozen enemies blue (some get turned to purple when hit with the Ice Beam, this is particularly noticeable when there's enemies with two different palettes and they get frozen)
 * Add Health and Missiles refills to the Omega Nest and Area 7 (Area with the first encounter of an Omega Metroid)
 
