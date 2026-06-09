@@ -52,8 +52,11 @@ out/Metroid2-Redux.gbc: out/game.o
 
 	@if which md5sum &>/dev/null; then md5sum $@; else md5 $@; fi
 
-	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.ips"
-	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.bps"
+	@echo
+	@echo "Creating Metroid 2 Redux IPS patch..."
+	@./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.ips"
+	@echo "Creating Metroid 2 Redux BPS patch..."
+	@./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.bps"
 
 out:
 	mkdir $@
