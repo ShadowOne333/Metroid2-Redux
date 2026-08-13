@@ -2426,10 +2426,32 @@ samus_handlePose: ;{ 00:0D21
     xor a
     ld [waterContactFlag], a
     ld [acidContactFlag], a
-    ; Increment animation-related counter
-    ld a, [samus_spinAnimationTimer]
-    inc a
-    ld [samus_spinAnimationTimer], a
+
+; Implement Movement-only Spin for Morph Ball hack by ShadowOne333 for Redux
+    ; Check conditions to enable Spinning animation
+    ld a, [samusPose]
+    cp pose_morph	; Morph Ball
+    jr z, .movement_check	; If in Morph ball, continue with buttom/mov check
+    cp pose_spider	; Spider Ball
+    jr z, .movement_check	; If in Spider ball, continue with buttom/mov check
+    jr .incrementTimer	; Anything else, continue with the normal animations
+
+    .movement_check
+        ; Increment animation-related counter only if left or right is pressed
+        ldh a, [hInputPressed]
+        bit PADB_RIGHT, a
+        jr nz, .incrementTimer
+        bit PADB_LEFT, a
+        jr nz, .incrementTimer
+        ; If neither left nor right is pressed, skip the increment
+        jr .skipTimer
+    
+    .incrementTimer:
+        ld a, [samus_spinAnimationTimer]
+        inc a
+        ld [samus_spinAnimationTimer], a
+    .skipTimer:
+    
     ; Erase inputs if dead
     ld a, [deathFlag]
     and a

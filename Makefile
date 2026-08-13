@@ -18,7 +18,7 @@ SRC/dmg/m2dmg.2bpp \
 
 allattrmap := $(all2bpp:%.2bpp=%.attrmap)
 
-all: SRC/gfx/titleCredits/titleScreen_add80.tilemap $(all2bpp) $(allattrmap) out/Metroid2-Redux.gbc out/Metroid2-Redux.ips out/Metroid2-Redux.bps
+all: SRC/gfx/titleCredits/titleScreen_add80.tilemap $(all2bpp) $(allattrmap) out/Metroid2-Redux.gbc out/Metroid2-Redux.bps # out/Metroid2-Redux.ips
 
 SRC/dmg/m2dmg.2bpp SRC/dmg/m2dmg.pal SRC/dmg/m2dmg.tilemap SRC/dmg/m2dmg.attrmap: SRC/dmg/m2dmg.png
 	rgbgfx -o $(basename $@).2bpp $< -u -P -T -A
@@ -53,16 +53,16 @@ out/Metroid2-Redux.gbc: out/game.o
 	@if which md5sum &>/dev/null; then md5sum $@; else md5 $@; fi
 
 	@echo
-	@echo "Creating Metroid 2 Redux IPS patch..."
-	@./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.ips"
+#	@echo "Creating Metroid 2 Redux IPS patch..."
+#	@./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.ips"
 	@echo "Creating Metroid 2 Redux BPS patch..."
 	@./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.bps"
 
 out:
 	mkdir $@
 
-out/Metroid2-Redux.ips:
-	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.ips"
+#out/Metroid2-Redux.ips:
+#	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.ips"
 out/Metroid2-Redux.bps:
 	./flips -c "rom/Metroid II - Return of Samus (World).gb" "out/Metroid2-Redux.gbc" "out/Metroid2-Redux.bps"
 
